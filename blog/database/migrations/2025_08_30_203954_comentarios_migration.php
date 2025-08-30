@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        /*Dar de alta los campos de la tabla*/
-        Schema::create('posts', function(Blueprint $table){
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->string('img',100);
-            $table->string('content',100);
-            $table->string('likes',100);
             $table->integer('user_id');
+            $table->integer('post_id');
             $table->timestamps();
         });
     }
