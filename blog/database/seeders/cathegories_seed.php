@@ -15,6 +15,8 @@ class cathegories_seed extends Seeder
     {
     DB::table('cathegories')->insert([
         "name"=>'Arboles','img'=>'default.jpg', 'created_at'=>date('y-m-d h:m:s')]);
-         DB::table('cathegories')->insert([
-        "name"=>'Arbustos','img'=>'default.jpg', 'created_at'=>date('y-m-d h:m:s')]);    }
+    DB::table('cathegories')->insert([
+        "name"=>'Arbustos','img'=>'default.jpg', 'created_at'=>date('y-m-d h:m:s')]);    
+
+    }
 }
