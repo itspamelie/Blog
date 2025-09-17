@@ -17,7 +17,7 @@
   @foreach ($usuarios as $item)
   <tr>
     <td>{{$item->id}}</td>
-    <td>{{ $item->img}}</td>
+    <td>{{$item->img}}</td>
     <td>{{$item->name}}</td>
     <td>{{ $item->nickname}}</td>
     <td>{{$item->email}}</td>
