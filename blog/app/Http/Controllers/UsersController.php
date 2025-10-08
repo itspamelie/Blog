@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     public function getUsers(){
         //SELECT * FROM USERS
         $data = User:: all();
