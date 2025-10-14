@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('likes',100);
             $table->ForeignId('user_id')->constrained('users');
             $table->ForeignId('cathegory_id')->constrained('cathegories');
-            $table->integer('slug');
+            $table->string('slug');
             $table->timestamps();
         });
     }
