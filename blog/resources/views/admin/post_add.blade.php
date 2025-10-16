@@ -42,7 +42,7 @@
 @endforeach
 </select>
 </div>
-<input type="text" name="content" id="content">
+<input type="hidden" name="content" id="content">
 <div id="editor">
 <p>Hello World ! </p>
 <p>Some initial <strong>bold</strong> text</p>
@@ -59,10 +59,15 @@
 
 
 @section('scripts')
-<!-- Initialize Quill editor -->
 <script>
   const quill = new Quill('#editor', {
     theme: 'snow'
   });
+  const form = document.querySelector('#form');
+  form.onsubmit = function() {
+    // Copiar el contenido HTML de Quill al input oculto
+    const contentInput = document.querySelector('input[name=content]');
+    contentInput.value = quill.root.innerHTML;
+  };
 </script>
 @endsection
